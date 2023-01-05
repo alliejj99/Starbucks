@@ -20,3 +20,19 @@ searchInputEl.addEventListener("blur", function () {
 /* 올해가 몇 년도인지 계산 */
 const thisYear = document.querySelector(".this-year");
 thisYear.textContent = new Date().getFullYear();
+
+/* 해상도 */
+let viewportSize = document.documentElement.clientWidth;
+
+if (1305 > viewportSize) {
+  let modal = document.createElement("div");
+  modal.className = "modal";
+
+  let text = document.createTextNode(
+    "해상도를 1300px 이상의 환경에서 실행해 주세요!"
+  );
+  modal.appendChild(text);
+  document.body.appendChild(modal);
+
+  document.body.classList.add("remove");
+}

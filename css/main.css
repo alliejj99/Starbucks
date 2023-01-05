@@ -879,3 +879,31 @@ footer .logo {
   justify-content: center;
   align-items: center;
 }
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #669900;
+  text-shadow: 0 0 5px #669900;
+  background-image: url("../images/video_cover_pattern.png");
+  background-color: black;
+  overflow: hidden;
+  z-index: 50;
+}
+body.remove header,
+body.remove section,
+body.remove footer,
+body.remove #to-top {
+  display: none;
+}

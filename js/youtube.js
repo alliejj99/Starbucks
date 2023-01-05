@@ -25,3 +25,8 @@ function onYouTubePlayerAPIReady() {
     },
   });
 }
+
+/*
+The service worker navigation preload request was cancelled before 'preloadResponse' settled. If you intend to use 'preloadResponse', use waitUntil() or respondWith() to wait for the promise to settle.
+해당 오류는 유튜브에서 나타나는 오류 입니다.
+*/

@@ -1,6 +1,4 @@
-/**
- * 검색창 제어
- */
+/* 검색창 제어 */
 // 검색창 요소(.search) 찾기.
 const searchEl = document.querySelector(".search");
 const searchInputEl = searchEl.querySelector("input");
@@ -19,9 +17,7 @@ searchInputEl.addEventListener("blur", function () {
   searchInputEl.setAttribute("placeholder", "");
 });
 
-/**
- * 페이지 스크롤에 따른 요소 제어
- */
+/* 페이지 스크롤에 따른 요소 제어 */
 // 페이지 스크롤에 영향을 받는 요소들을 검색!
 const badgeEl = document.querySelector("header .badges");
 const toTopEl = document.querySelector("#to-top");
@@ -64,9 +60,7 @@ toTopEl.addEventListener("click", function () {
   });
 });
 
-/**
- * 순서대로 나타나는 기능
- */
+/* 순서대로 나타나는 기능 */
 // 나타날 요소들(.fade-in) 찾기.
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 // 나타날 요소들을 하나씩 반복해서 처리!
@@ -78,9 +72,7 @@ fadeEls.forEach(function (fadeEl, index) {
   });
 });
 
-/**
- * 슬라이드 요소 관리
- */
+/* 슬라이드 요소 관리 */
 new Swiper(".notice-line .swiper", {
   direction: "vertical", // 수직 슬라이드
   autoplay: true, // 자동 재생 여부
@@ -121,9 +113,7 @@ new Swiper(".awards .swiper", {
   },
 });
 
-/**
- * Promotion 슬라이드 토글 기능
- */
+/* Promotion 슬라이드 토글 기능 */
 // 슬라이드 영역 요소 검색!
 const promotionEl = document.querySelector(".promotion");
 // 슬라이드 영역를 토글하는 버튼 검색!
@@ -143,9 +133,7 @@ promotionToggleBtn.addEventListener("click", function () {
   }
 });
 
-/**
- * 부유하는 요소 관리
- */
+/* 부유하는 요소 관리 */
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 '문자 데이터'를,
@@ -170,9 +158,7 @@ floatingObject(".floating1", 1, 15);
 floatingObject(".floating2", 0.5, 15);
 floatingObject(".floating3", 1.5, 20);
 
-/**
- * 요소가 화면에 보여짐 여부에 따른 요소 관리
- */
+/* 요소가 화면에 보여짐 여부에 따른 요소 관리 */
 // 관리할 요소들 검색!
 const spyEls = document.querySelectorAll("section.scroll-spy");
 // 요소들 반복 처리!
@@ -186,8 +172,6 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 });
 
-/**
- * 올해가 몇 년도인지 계산
- */
+/* 올해가 몇 년도인지 계산 */
 const thisYear = document.querySelector(".this-year");
 thisYear.textContent = new Date().getFullYear();
